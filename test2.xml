@@ -1,0 +1,111 @@
+<?xml version='1.0' encoding='utf-8' ?>
+
+<!-- build 20203.20.0801.1333                               -->
+<datasource formatted-name='federated.1frmj2g1xs0ofm10jiwal096jb6h' inline='true' source-platform='win' version='18.1' xmlns:user='http://www.tableausoftware.com/xml/user'>
+
+  <document-format-change-manifest>
+    <_.fcp.ObjectModelEncapsulateLegacy.true...ObjectModelEncapsulateLegacy />
+    <_.fcp.ObjectModelTableType.true...ObjectModelTableType />
+    <_.fcp.SchemaViewerObjectModel.true...SchemaViewerObjectModel />
+  </document-format-change-manifest>
+
+  <connection class='federated'>
+    <named-connections>
+      <named-connection caption='MySQLServConn' name='sqlserver_conn'>
+        <connection authentication='sspi' class='sqlserver' dbname='Adv' minimum-driver-version='SQL Server Native Client 10.0' odbc-native-protocol='yes' one-time-sql='' port='0' server='localhost' />
+      </named-connection>
+    </named-connections>
+
+    <_.fcp.ObjectModelEncapsulateLegacy.false...relation connection='sqlserver_conn' name='Employee' table='[HumanResources].[Employee]' type='table' />
+    <_.fcp.ObjectModelEncapsulateLegacy.true...relation connection='sqlserver_conn' name='Employee' table='[HumanResources].[Employee]' type='table' />
+    
+    <metadata-records>
+      <metadata-record class='column'>
+        <remote-name>BusinessEntityID</remote-name>
+        <remote-type>3</remote-type>
+        <local-name>[BusinessEntityID]</local-name>
+        <parent-name>[Employee]</parent-name>
+        <remote-alias>BusinessEntityID</remote-alias>
+        <ordinal>1</ordinal>
+        <local-type>integer</local-type>
+        <aggregation>Sum</aggregation>
+        <precision>10</precision>
+        <contains-null>false</contains-null>
+        <attributes>
+          <attribute datatype='string' name='DebugRemoteType'>&quot;SQL_INTEGER&quot;</attribute>
+          <attribute datatype='string' name='DebugWireType'>&quot;SQL_C_SLONG&quot;</attribute>
+        </attributes>
+        <_.fcp.ObjectModelEncapsulateLegacy.true...object-id>[Employee (HumanResources.Employee)_55DDE4A4E0E3424197071D0F37098C59]</_.fcp.ObjectModelEncapsulateLegacy.true...object-id>
+      </metadata-record>
+      <metadata-record class='column'>
+        <remote-name>LoginID</remote-name>
+        <remote-type>130</remote-type>
+        <local-name>[LoginID]</local-name>
+        <parent-name>[Employee]</parent-name>
+        <remote-alias>LoginID</remote-alias>
+        <ordinal>3</ordinal>
+        <local-type>string</local-type>
+        <aggregation>Count</aggregation>
+        <width>256</width>
+        <contains-null>false</contains-null>
+        <padded-semantics>true</padded-semantics>
+        <collation flag='2147483649' name='LEN_RUS_S2_VWIN' />
+        <attributes>
+          <attribute datatype='string' name='DebugRemoteType'>&quot;SQL_WVARCHAR&quot;</attribute>
+          <attribute datatype='string' name='DebugWireType'>&quot;SQL_C_WCHAR&quot;</attribute>
+          <attribute datatype='string' name='TypeIsVarchar'>&quot;true&quot;</attribute>
+        </attributes>
+        <_.fcp.ObjectModelEncapsulateLegacy.true...object-id>[Employee (HumanResources.Employee)_55DDE4A4E0E3424197071D0F37098C59]</_.fcp.ObjectModelEncapsulateLegacy.true...object-id>
+      </metadata-record>
+      <metadata-record class='column'>
+        <remote-name>OrganizationLevel</remote-name>
+        <remote-type>2</remote-type>
+        <local-name>[OrganizationLevel]</local-name>
+        <parent-name>[Employee]</parent-name>
+        <remote-alias>OrganizationLevel</remote-alias>
+        <ordinal>5</ordinal>
+        <local-type>integer</local-type>
+        <aggregation>Sum</aggregation>
+        <precision>5</precision>
+        <contains-null>true</contains-null>
+        <attributes>
+          <attribute datatype='string' name='DebugRemoteType'>&quot;SQL_SMALLINT&quot;</attribute>
+          <attribute datatype='string' name='DebugWireType'>&quot;SQL_C_SSHORT&quot;</attribute>
+        </attributes>
+        <_.fcp.ObjectModelEncapsulateLegacy.true...object-id>[Employee (HumanResources.Employee)_55DDE4A4E0E3424197071D0F37098C59]</_.fcp.ObjectModelEncapsulateLegacy.true...object-id>
+      </metadata-record>
+      <metadata-record class='column'>
+        <remote-name>JobTitle</remote-name>
+        <remote-type>130</remote-type>
+        <local-name>[JobTitle]</local-name>
+        <parent-name>[Employee]</parent-name>
+        <remote-alias>JobTitle</remote-alias>
+        <ordinal>6</ordinal>
+        <local-type>string</local-type>
+        <aggregation>Count</aggregation>
+        <width>50</width>
+        <contains-null>false</contains-null>
+        <padded-semantics>true</padded-semantics>
+        <collation flag='2147483649' name='LEN_RUS_S2_VWIN' />
+        <attributes>
+          <attribute datatype='string' name='DebugRemoteType'>&quot;SQL_WVARCHAR&quot;</attribute>
+          <attribute datatype='string' name='DebugWireType'>&quot;SQL_C_WCHAR&quot;</attribute>
+          <attribute datatype='string' name='TypeIsVarchar'>&quot;true&quot;</attribute>
+        </attributes>
+        <_.fcp.ObjectModelEncapsulateLegacy.true...object-id>[Employee (HumanResources.Employee)_55DDE4A4E0E3424197071D0F37098C59]</_.fcp.ObjectModelEncapsulateLegacy.true...object-id>
+      </metadata-record>
+    </metadata-records>
+  </connection>
+  <aliases enabled='yes' />
+  <column aggregation='Sum' datatype='integer' name='[BusinessEntityID]' role='dimension' type='ordinal' />
+  <_.fcp.ObjectModelTableType.true...column caption='Employee' datatype='table' name='[__tableau_internal_object_id__].[Employee (HumanResources.Employee)_55DDE4A4E0E3424197071D0F37098C59]' role='measure' type='quantitative' />
+  <_.fcp.ObjectModelEncapsulateLegacy.true...object-graph>
+    <objects>
+      <object caption='Employee' id='Employee (HumanResources.Employee)_55DDE4A4E0E3424197071D0F37098C59'>
+        <properties context=''>
+          <relation connection='sqlserver.125xcza12dt6fm19w19w00fnobfw' name='Employee' table='[HumanResources].[Employee]' type='table' />
+        </properties>
+      </object>
+    </objects>
+  </_.fcp.ObjectModelEncapsulateLegacy.true...object-graph>
+</datasource>
